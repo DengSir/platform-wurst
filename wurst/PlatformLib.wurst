@@ -1,0 +1,25 @@
+/*
+ * @File   : PlatformGlobalLib.wurst
+ * @Author : DengSir (tdaddon@163.com)
+ * @Link   : https://dengsir.github.io
+ * @Date   : 2018-7-6 15:24:44
+ */
+
+package PlatformLib
+import NoWurst
+
+public class Platform
+    static function isLobby() returns bool
+        return DzAPI_Map_IsRPGLobby()
+
+    static function isLadder() returns bool
+        return DzAPI_Map_IsRPGLadder()
+
+    static function getMatchType() returns int
+        return DzAPI_Map_GetMatchType()
+
+    static function getGameStartTime() returns int
+        return DzAPI_Map_GetGameStartTime()
+
+
+

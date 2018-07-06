@@ -1,0 +1,11 @@
+/*
+ * @File   : PlatformLib.wurst
+ * @Author : DengSir (tdaddon@163.com)
+ * @Link   : https://dengsir.github.io
+ * @Date   : 2018-7-6 15:15:02
+ */
+
+package Platform
+import NoWurst
+import public PlatformPlayerLib
+import public PlatformLib

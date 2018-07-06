@@ -1,0 +1,60 @@
+/*
+ * @File   : PlatformPlayerLib.wurst
+ * @Author : DengSir (tdaddon@163.com)
+ * @Link   : https://dengsir.github.io
+ * @Date   : 2018-7-6 15:08:49
+ */
+
+package PlatformPlayerLib
+import NoWurst
+
+public function player.getServerValue(string key) returns string
+    return DzAPI_Map_GetServerValue(this, key)
+
+public function player.saveServerValue(string key, string value) returns bool
+    return DzAPI_Map_SaveServerValue(this, key, value)
+
+public function player.getMapLevel() returns int
+    return DzAPI_Map_GetMapLevel(this)
+
+public function player.getMapLevelRank() returns int
+    return DzAPI_Map_GetMapLevelRank(this)
+
+public function player.setLadderStat(string key, string value)
+    DzAPI_Map_Ladder_SetStat(this, key, value)
+
+public function player.setLadderPlayerStat(string key, string value)
+    DzAPI_Map_Ladder_SetPlayerStat(this, key, value)
+
+public function player.getLadderLevel() returns int
+    return DzAPI_Map_GetLadderLevel(this)
+
+public function player.getLadderRank() returns int
+    return DzAPI_Map_GetLadderRank(this)
+
+public function player.updatePlayerHero(unit actor)
+    DzAPI_Map_UpdatePlayerHero(this, actor)
+
+public function player.getGuildName() returns string
+    return DzAPI_Map_GetGuildName(this)
+
+public function player.getGuildRole() returns int
+    return DzAPI_Map_GetGuildRole(this)
+
+public function player.hasMallItem(string key) returns bool
+    return DzAPI_Map_HasMallItem(this, key)
+
+public function player.getUserId() returns int
+    return DzAPI_Map_GetUserID(this)
+
+public function player.getPlatformVip() returns int
+    return DzAPI_Map_GetPlatformVIP(this)
+
+public function player.useItem(string key)
+    DzAPI_Map_UseConsumablesItem(this, key)
+
+public function player.openStore()
+    DzAPI_Map_ToggleStore(this, true)
+
+public function player.closeStore()
+    DzAPI_Map_ToggleStore(this, false)
