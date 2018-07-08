@@ -7,6 +7,7 @@
 
 package PlatformLib
 import NoWurst
+import PlatformNative
 
 public class Platform
     static function isLobby() returns bool

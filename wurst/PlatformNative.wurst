@@ -1,0 +1,110 @@
+/*
+ * @File   : PlatformNative.wurst
+ * @Author : DengSir (tdaddon@163.com)
+ * @Link   : https://dengsir.github.io
+ * @Date   : 2018-7-9 00:30:46
+ */
+
+package PlatformNative
+
+//活动完成调用
+public native DzAPI_Map_MissionComplete        ( player whichPlayer, string key, string value )
+
+//获取当前活动数据
+public native DzAPI_Map_GetActivityData        (  ) returns string
+
+//获取当前地图等级
+public native DzAPI_Map_GetMapLevel            ( player whichPlayer ) returns integer
+
+//保存key，value到服务器
+public native DzAPI_Map_SaveServerValue        ( player whichPlayer, string key, string value ) returns boolean
+
+//读取服务器对应key的value
+public native DzAPI_Map_GetServerValue         ( player whichPlayer, string key ) returns string
+
+//地图统计-提交统计数据
+public native DzAPI_Map_Stat_SetStat           ( player whichPlayer, string key, string value )
+
+//rpg天梯-提交统计数据
+public native DzAPI_Map_Ladder_SetStat         ( player whichPlayer, string key, string value )
+
+//rpg天梯-提交指定玩家的统计数据
+public native DzAPI_Map_Ladder_SetPlayerStat   ( player whichPlayer, string key, string value )
+
+//判断当前地图是否rpg大厅来的
+public native DzAPI_Map_IsRPGLobby             (  ) returns boolean
+
+//取游戏开始时间
+public native DzAPI_Map_GetGameStartTime       (  ) returns integer
+
+//判断当前地图是否rpg天梯
+public native DzAPI_Map_IsRPGLadder            (  ) returns boolean
+
+//获取匹配类型
+public native DzAPI_Map_GetMatchType      		(  ) returns integer
+
+//设置玩家的英雄
+public native DzAPI_Map_UpdatePlayerHero		( player whichPlayer, unit whichUnit )
+
+//获取当前天梯等级
+public native DzAPI_Map_GetLadderLevel         ( player whichPlayer ) returns integer
+
+//提供给地图的接口，用与判断是否红V
+public native DzAPI_Map_IsRedVIP               ( player whichPlayer ) returns boolean
+
+//提供给地图的接口，用与判断是否蓝V
+public native DzAPI_Map_IsBlueVIP              ( player whichPlayer ) returns boolean
+
+//提供给地图的接口，用与取天梯排名
+public native DzAPI_Map_GetLadderRank          ( player whichPlayer ) returns integer
+
+//提供给地图的接口，用与取地图等级排名
+public native DzAPI_Map_GetMapLevelRank        ( player whichPlayer ) returns integer
+
+//获取加载服务器存档时的错误码
+public native DzAPI_Map_GetServerValueErrorCode ( player whichPlayer ) returns integer
+
+//获取公会名称
+public native DzAPI_Map_GetGuildName           ( player whichPlayer ) returns string
+
+//获取公会职责 Member=10 Admin=20 Leader=30
+public native DzAPI_Map_GetGuildRole           ( player whichPlayer ) returns integer
+
+//获取地图配置
+public native DzAPI_Map_GetMapConfig           ( string key ) returns string
+
+//判断是否拥有商品
+public native DzAPI_Map_HasMallItem            ( player whichPlayer, string key ) returns boolean
+
+//修改游戏内商店物品数量
+public native DzAPI_Map_ChangeStoreItemCount   ( integer team, string itemId, integer count )
+
+//修改游戏内商店物品CD
+public native DzAPI_Map_ChangeStoreItemCoolDown ( integer team, string itemId, integer seconds )
+
+//开启/关闭内置商店
+public native DzAPI_Map_ToggleStore            ( player whichPlayer, boolean show )
+
+//读取服务器装备数据
+public native DzAPI_Map_GetServerArchiveEquip  ( player whichPlayer, string key ) returns integer
+
+//读取服务器掉落数据
+public native DzAPI_Map_GetServerArchiveDrop   ( player whichPlayer, string key ) returns string
+
+//触发boss击杀
+public native DzAPI_Map_OrpgTrigger            ( player whichPlayer, string key )
+
+//获取玩家ID
+public native DzAPI_Map_GetUserID              ( player whichPlayer ) returns integer
+
+//获取平台vip
+public native DzAPI_Map_GetPlatformVIP         ( player whichPlayer ) returns integer
+
+//保存key，value到公共存档中
+public native DzAPI_Map_SavePublicArchive      ( player whichPlayer, string key, string value ) returns boolean
+
+//读取公共存档对应key的value
+public native DzAPI_Map_GetPublicArchive       ( player whichPlayer, string key ) returns string
+
+//局数消耗商品调用
+public native DzAPI_Map_UseConsumablesItem     ( player whichPlayer, string key )
