@@ -22,5 +22,8 @@ public class Platform
     static function getGameStartTime() returns int
         return DzAPI_Map_GetGameStartTime()
 
+    static function getActivityData() returns string
+        return DzAPI_Map_GetActivityData()
 
-
+    static function getConfig(string key) returns string
+        return DzAPI_Map_GetMapConfig(key)

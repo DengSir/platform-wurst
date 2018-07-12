@@ -9,6 +9,9 @@ package PlatformPlayerLib
 import NoWurst
 import PlatformNative
 
+public function player.getServerValueErorrCode() returns int
+    return DzAPI_Map_GetServerValueErrorCode(this)
+
 public function player.getServerValue(string key) returns string
     return DzAPI_Map_GetServerValue(this, key)
 
@@ -54,8 +57,11 @@ public function player.getPlatformVip() returns int
 public function player.useItem(string key)
     DzAPI_Map_UseConsumablesItem(this, key)
 
-public function player.openStore()
-    DzAPI_Map_ToggleStore(this, true)
+// public function player.openStore()
+//     DzAPI_Map_ToggleStore(this, true)
 
-public function player.closeStore()
-    DzAPI_Map_ToggleStore(this, false)
+// public function player.closeStore()
+//     DzAPI_Map_ToggleStore(this, false)
+
+public function player.missionComplete(string key, string value)
+    DzAPI_Map_MissionComplete(this, key, value)
